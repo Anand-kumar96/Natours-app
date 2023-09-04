@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    link(rel='stylesheet' href='/css/style.css') 
+    link(rel='shortcut icon' type='image/png' href='/img/myIcon.png')
+    title Natours | #{tour}
+  body
+
+    h1= tour
+    h2= user.toUpperCase()
+    //- h1 The Park Camper
+    p This is just some text
+    -const x = 10;
+    h2= 2* x
+
+
+
+//-comment 
+//- 1) // automatic come from public folder because we serve it as static file app.js this type of comment show in element devtools but //- type not show
+ we can you javascript also 
+//- code which going to add something on output=>buffered code & code which is not add on output => unBuffered code
+//- ex-=> unBuffered code => - const x = 10; =>buffered code => h2= 2 * x
+//- for interpolation in es6 => we use ${} but here we use => #{}
+

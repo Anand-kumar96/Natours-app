@@ -1,0 +1,118 @@
+extends base
+include _headerBox
+include _about_section
+include _stories
+block content
+  if (!myBooking)
+    +headerBox()
+
+  if showHeading && myBooking
+    h1.booked-tours Your booked tours 
+  else if myBooking
+    h1.booked-tours You have not booked any tour Yet 
+
+  if (!myBooking)
+    main.main#top-tours
+      .text__heading__box
+        h2.heading-all-tours Most popular tours
+      .card-container 
+        //-loop built in pug
+        each tour in topTours
+          .card
+            .card__header
+              .card__picture
+                .card__picture-overlay &nbsp;
+                img.card__picture-img(src=`/img/tours/${tour.imageCover}` alt=`${tour.name}`)
+              h3.heading-tertirary
+                span= tour.name
+
+            .card__details
+              h4.card__sub-heading= `${tour.difficulty} ${tour.duration}-day tour`
+              p.card__text= tour.summary
+              .card__data
+                svg.card__icon
+                  use(xlink:href='img/icons.svg#icon-map-pin')
+                span= tour.startLocation.description
+              .card__data
+                svg.card__icon
+                  use(xlink:href='img/icons.svg#icon-calendar')
+                span= tour.startDates[0].toLocaleString('en-us',{month:'long', year:'numeric'})
+              .card__data
+                svg.card__icon
+                  use(xlink:href='img/icons.svg#icon-flag')
+                span= `${tour.locations.length} stops`
+              .card__data
+                svg.card__icon
+                  use(xlink:href='img/icons.svg#icon-user')
+                span= `${tour.maxGroupSize} people` 
+
+            .card__footer
+              p
+                span.card__footer-value= `$${tour.price}`
+                | 
+                span.card__footer-text per person
+              p.card__ratings
+                span.card__footer-value= tour.ratingsAverage
+                | 
+                span.card__footer-text= `rating (${tour.ratingsQuantity})`
+              if myBooking
+                a.btn.btn--green.btn--small.disableDetails(href=`/tour/${tour.slug}`) Details
+              else
+                a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
+
+    .u-center-text.u-margin-top-huge.tour--btn
+      a(href="#all-tours").btn.btn--green Discover all tours
+
+  if (!myBooking)
+    +aboutBox()
+
+  main.main#all-tours
+    if (!myBooking)
+      .text__heading__box
+        h2.heading-all-tours All Tours
+    .card-container 
+      //-loop built in pug
+      each tour in tours
+        .card
+          .card__header
+            .card__picture
+              .card__picture-overlay &nbsp;
+              img.card__picture-img(src=`/img/tours/${tour.imageCover}` alt=`${tour.name}`)
+            h3.heading-tertirary
+              span= tour.name
+
+          .card__details
+            h4.card__sub-heading= `${tour.difficulty} ${tour.duration}-day tour`
+            p.card__text= tour.summary
+            .card__data
+              svg.card__icon
+                use(xlink:href='img/icons.svg#icon-map-pin')
+              span= tour.startLocation.description
+            .card__data
+              svg.card__icon
+                use(xlink:href='img/icons.svg#icon-calendar')
+              span= tour.startDates[0].toLocaleString('en-us',{month:'long', year:'numeric'})
+            .card__data
+              svg.card__icon
+                use(xlink:href='img/icons.svg#icon-flag')
+              span= `${tour.locations.length} stops`
+            .card__data
+              svg.card__icon
+                use(xlink:href='img/icons.svg#icon-user')
+              span= `${tour.maxGroupSize} people` 
+
+          .card__footer
+            p
+              span.card__footer-value= `$${tour.price}`
+              | 
+              span.card__footer-text per person
+            p.card__ratings
+              span.card__footer-value= tour.ratingsAverage
+              | 
+              span.card__footer-text= `rating (${tour.ratingsQuantity})`
+            if myBooking
+              a.btn.btn--green.btn--small.disableDetails(href=`/tour/${tour.slug}`) Details
+            else
+              a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
+  if (!myBooking)
+    +stories()

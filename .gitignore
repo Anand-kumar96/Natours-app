@@ -1,0 +1,6 @@
+node_modules/
+*.env
+.cache
+.vscode
+esLint.txt
+dev-data/data
