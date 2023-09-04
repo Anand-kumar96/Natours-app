@@ -1,5 +1,4 @@
 /*eslint-disable */
-// This is your test publishable API key.
 import axios from 'axios';
 import { showAlert } from './alerts';
 const Stripe = require('stripe');
@@ -9,7 +8,7 @@ export const bookTour = async tourId => {
   try {
     const session = await axios({
       method: 'GET',
-      url: `http://localhost:5000/api/v1/bookings/checkout-session/${tourId}`
+      url: `/api/v1/bookings/checkout-session/${tourId}`
     });
     // console.log(session);
     // 2 create Checkout form + charge a credit card
