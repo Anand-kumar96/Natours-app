@@ -7,6 +7,8 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
+const cors = require('cors');
 
 const bookingRouter = require('./routes/bookingRoutes');
 const tourRouter = require('./routes/tourRoutes');
@@ -22,12 +24,16 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 //Global Middleware
+
+//Access-control-allow-Origin
+app.use(cors()); // implement Cors
 //serving static file
 app.use(express.static(path.join(__dirname, 'public')));
 
 // SET SECURITY HTTP HEADERS
-app.use(helmet()); // after calling the function return middleware function
-///////Helmet from  comment section
+app.use(helmet());
+
+// to work map
 const scriptSrcUrls = [
   'https://unpkg.com/',
   'https://tile.openstreetmap.org',
@@ -63,9 +69,7 @@ app.use(
   })
 );
 
-////////////
 // LIMIT REQUEST FROM SAME IP
-// install rate limiter=> npm i express-rate-limit //limiter=>  this is middleware
 const limiter = rateLimit({
   max: 100,
   windowMs: 60 * 60 * 1000,
@@ -76,20 +80,16 @@ app.use('/api', limiter); // applicable on all routes start with api
 //DEVELOPMENT LOGGING
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
-  // to run when in development
 }
-//BODY PARSER, READING DATA FROM BODY INTO REQ.BODY
-app.use(express.json({ limit: '10kb' })); // TO LIMIT DATA WE CAN PASS LIMIT:'10KB' IN JSON
-//cookie -parse
-app.use(cookieParser());
-app.use(express.urlencoded({ extended: true, limit: '16kb' })); // parse data from form
-//Data Sanitization against NO SQL query injection
-app.use(mongoSanitize()); // after calling the function return middleware function
 
-//Data Sanitization against XSS
-app.use(xss()); // after calling the function return middleware function
-
-//prevent parameter pollution
+// ALL PARSER and OTHER MIDDLEWARE
+app.use(express.json({ limit: '10kb' })); //BODY PARSER
+app.use(cookieParser()); //cookie -parse
+app.use(express.urlencoded({ extended: true, limit: '16kb' })); // DATA PARSER FROM FORM
+app.use(mongoSanitize()); //Data Sanitization against NO SQL query injection
+app.use(xss()); //Data Sanitization against XSS
+app.use(compression());
+//prevent parameter population
 app.use(
   hpp({
     whitelist: [
@@ -107,6 +107,7 @@ app.use((req, res, next) => {
   // console.log(req.cookies);
   next();
 });
+
 // Middleware for mounting routes
 app.use('/', viewRouter);
 app.use('/api/v1/tours', tourRouter);
@@ -118,7 +119,7 @@ app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!!`, 404));
 });
 
-// error handling MiddleWare
+// Global Error handling MiddleWare
 app.use(globalErrorHandler);
 
 module.exports = app;

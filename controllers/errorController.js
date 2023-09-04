@@ -1,33 +1,33 @@
 const AppError = require('../utils/appError');
 
-// handling invalid database id
+// INVALID DATABASE ID HANDLER
 const handleCastErrorDB = err => {
   const message = `${err}`;
   return new AppError(message, 400);
 };
 
-// handling duplicate database fields
+// DUPLICATE DATABASE FIELD HANDLER
 const handleDuplicateFieldsDB = err => {
   const value = err.keyValue.name;
   const message = `Duplicate field value: ${value}. please enter other name`;
   return new AppError(message, 400);
 };
 
-// handling validation database error =>ex:updating=>schema
+// HANDLING VALIDATION DATABASE ERROR =>ex:updating=>schema
 const handleValidationErrorDB = err => {
   const errors = Object.values(err.errors).map(el => el.message);
   const message = `Invalid input data: ${errors.join('. ')}`;
   return new AppError(message, 400);
 };
 
-// handling jwtWebToken error
+// HANDLING JWT WEB TOKEN ERROR
 const handleJWTError = err => {
   const value = err.message;
   const message = `${value}. please log in again.`;
   return new AppError(message, 401);
 };
 
-// handling expired token
+// HANDLING EXPIRED TOKEN
 const handleJWTExpiredError = err => {
   const message = `${err.message}. please log in again`;
   return new AppError(message, 401);
@@ -91,6 +91,7 @@ const sendErrorProd = (err, req, res) => {
   });
 };
 
+//PRODUCTION ERROR
 exports.globalErrorHandler = (err, req, res, next) => {
   err.statusCode = err.statusCode || 500;
   err.status = err.status || 'error';

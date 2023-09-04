@@ -48,6 +48,7 @@ exports.getTour = catchAsync(async (req, res, next) => {
   });
 });
 
+// RENDERING ALL TEMPLATES
 exports.loginForm = catchAsync(async (req, res, next) => {
   res.status(200).render('login', {
     title: 'Log into your account'

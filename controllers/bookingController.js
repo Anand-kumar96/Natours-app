@@ -52,6 +52,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 });
 
+// CREATE BOOKING CHECKOUT
 exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   //This is TEMPORARY , because it is INSECURE: everyone can make new booking without paying
   // solution => use Webhook after deploying it we will improved it
@@ -61,6 +62,7 @@ exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   res.redirect(req.originalUrl.split('?')[0]);
 });
 
+// ALL ENDPOINTS FOR BOOKING
 exports.getBooking = factory.getOne(Booking);
 exports.getAllBookings = factory.getAll(Booking);
 exports.CreateBooking = factory.createOne(Booking);

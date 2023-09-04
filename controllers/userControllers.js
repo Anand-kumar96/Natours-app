@@ -1,22 +1,10 @@
 const multer = require('multer');
 const sharp = require('sharp');
-
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 const User = require('../model/userModel');
 
-//multer configuration
-// const multerStorage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, 'public/img/users');
-//   },
-//   filename: (req, file, cb) => {
-//     const ext = file.mimetype.split('/')[1];
-//     //user-userId-timestamp.extension
-//     cb(null, `user-${req.user.id}-${Date.now()}.${ext}`);
-//   }
-// });
 const multerStorage = multer.memoryStorage();
 //multer filter // to check file is image or not
 const multerFilter = (req, file, cb) => {
@@ -47,30 +35,19 @@ exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
   next();
 });
 
-//for /me user we can use  getMe middleware => before getUser
+//GET CURRENT USER
 exports.getMe = (req, res, next) => {
   req.params.id = req.user.id;
   next();
 };
-// DO Not Update password with this
-// Delete user =>admin only
+
+// ALL ENDPOINTS USING HANDLE FACTORY FUNCTION
 exports.getAllUsers = factory.getAll(User);
 exports.getUser = factory.getOne(User, 'User');
-exports.updateUser = factory.updateOne(User, 'User');
-exports.deleteUser = factory.deleteOne(User, 'User');
+exports.updateUser = factory.updateOne(User, 'User'); // DO Not Update password with this
+exports.deleteUser = factory.deleteOne(User, 'User'); //admin only
 
-// exports.getAllUsers = catchAsync(async (req, res) => {
-//   const users = await User.find();
-//   //SEND RESPONSE
-//   res.status(200).json({
-//     status: 'success',
-//     result: users.length,
-//     data: {
-//       tours: users
-//     }
-//   });
-// });
-
+// HELPER
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
   Object.keys(obj).forEach(el => {
@@ -80,10 +57,9 @@ const filterObj = (obj, ...allowedFields) => {
   });
   return newObj;
 };
-// updateMe means user which currently login
+
+// UPDATE USER
 exports.updateMe = catchAsync(async (req, res, next) => {
-  // console.log(req.file);
-  // console.log(req.body);
   // 1 create error if user post password data
   if (req.body.password || req.body.passwordConfirm) {
     return next(
@@ -92,12 +68,11 @@ exports.updateMe = catchAsync(async (req, res, next) => {
       )
     );
   }
-  // we don't want user to change role,token etc so we filter => we just wanna update name,email
+
   //2 filter out the unwanted field name that are not allowed to be updated.
   const filterBody = filterObj(req.body, 'name', 'email');
   if (req.file) filterBody.photo = req.file.filename;
   //3 Update user document
-  // here we can not use save method because we need required field so we use findByIdAndUpdate
   const updateUser = await User.findByIdAndUpdate(req.user.id, filterBody, {
     new: true,
     runValidators: true
@@ -110,7 +85,7 @@ exports.updateMe = catchAsync(async (req, res, next) => {
   });
 });
 
-//delete by himself=>user
+//DELETE USER
 exports.deleteMe = catchAsync(async (req, res, next) => {
   await User.findByIdAndUpdate(req.user.id, { active: false });
   res.status(204).json({
@@ -118,3 +93,16 @@ exports.deleteMe = catchAsync(async (req, res, next) => {
     data: null
   });
 });
+
+// OTHER WAY FOR MULTER
+//multer configuration
+// const multerStorage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, 'public/img/users');
+//   },
+//   filename: (req, file, cb) => {
+//     const ext = file.mimetype.split('/')[1];
+//     //user-userId-timestamp.extension
+//     cb(null, `user-${req.user.id}-${Date.now()}.${ext}`);
+//   }
+// });

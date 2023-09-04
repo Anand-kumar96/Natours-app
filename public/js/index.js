@@ -1,4 +1,3 @@
-// console.log('hello from parcel');
 /*eslint-disable */
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
@@ -19,8 +18,9 @@ const userPasswordForm = document.querySelector('.form-user-password');
 const logOutBtn = document.querySelector('.nav__el--logout');
 const bookBtn = document.getElementById('book-tour');
 
-
 //DELEGATION
+
+// SHOWING MAP
 if (mapBox) {
   const locations = JSON.parse(
     document.getElementById('map').dataset.locations
@@ -28,6 +28,7 @@ if (mapBox) {
   displayMap(locations);
 }
 
+// LOGIN
 if (loginForm) {
   document.querySelector('.form').addEventListener('submit', e => {
     e.preventDefault();
@@ -38,10 +39,12 @@ if (loginForm) {
     document.getElementById('password').value = '';
   });
 }
+
+// CREATE ACCOUNT
 if (signupForm) {
   signupForm.addEventListener('submit', e => {
     e.preventDefault();
-      e.target.querySelector('.btn').textContent = 'Processing...';
+    e.target.querySelector('.btn').textContent = 'Processing...';
     const name = document.querySelector('.signup-name').value;
     const email = document.querySelector('.signup-email').value;
     const password = document.querySelector('.signup-password').value;
@@ -54,29 +57,27 @@ if (signupForm) {
     document.querySelector('.signup-confirmPassword').value = '';
   });
 }
+
+//LOGOUT
 if (logOutBtn) {
   document.querySelector('.nav__el--logout').addEventListener('click', e => {
     logout();
   });
 }
 
+//UPDATE USER DATA
 if (userDataForm) {
   document.querySelector('.form-user-data').addEventListener('submit', e => {
     e.preventDefault();
-    // using form => form will object
     const form = new FormData();
     form.append('name', document.getElementById('name').value);
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
-
-    // const name = document.getElementById('name').value;
-    // const email = document.getElementById('email').value;
-    // const photo = document.getElementById('photo').files[0];
-    // updateSettings({ name, email,photo }, 'data');
     updateSettings(form, 'data');
   });
 }
-// to updatePassword
+
+// UPDATE PASSWORD
 if (userPasswordForm) {
   document
     .querySelector('.form-user-password')
@@ -98,6 +99,7 @@ if (userPasswordForm) {
     });
 }
 
+//BOOK TOUR
 if (bookBtn) {
   bookBtn.addEventListener('click', e => {
     // data-tour-id -> convert to tourId
