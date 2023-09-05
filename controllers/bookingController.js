@@ -6,13 +6,13 @@ const catchAsync = require('../utils/catchAsync');
 const Email = require('../utils/email');
 const factory = require('./handlerFactory');
 
+//@GET CHECKOUT SESSION
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   //1 Get current Book tour
   const tour = await Tour.findById(req.params.tourId);
   //2 create checkout session
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
-    //query String
     success_url: `${req.protocol}://${req.get('host')}/?tour=${
       req.params.tourId
     }&user=${req.user.id}&price=${tour.price}`,
@@ -58,16 +58,20 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   });
 });
 
+// @CREATE BOOKING CHECKOUT
 exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   const { tour, user, price } = req.query;
   if (!tour || !user || !price) return next();
   await Booking.create({ tour, user, price });
   const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
+
+  //sending booking confirmation email
   const newUser = await User.findById(user);
   await new Email(newUser, newBooking).bookingConfirm();
   res.redirect(`${req.originalUrl.split('?')[0]}?alert=booking`);
 });
 
+// ALL ENDPOINTS FOR BOOKING
 exports.getBooking = factory.getOne(Booking);
 exports.getAllBookings = factory.getAll(Booking);
 exports.CreateBooking = factory.createOne(Booking);
