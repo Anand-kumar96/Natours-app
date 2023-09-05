@@ -2,6 +2,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const Booking = require('../model/bookingModel');
 const Tour = require('../model/tourModel');
 const catchAsync = require('../utils/catchAsync');
+const Email = require('../utils/email');
 const factory = require('./handlerFactory');
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
@@ -57,11 +58,11 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 });
 
 exports.createBookingCheckout = catchAsync(async (req, res, next) => {
-  //This is TEMPORARY , because it is INSECURE: everyone can make new booking without paying
-  // solution => use Webhook after deploying it we will improved it
   const { tour, user, price } = req.query;
   if (!tour || !user || !price) return next();
   await Booking.create({ tour, user, price });
+  const newBooking = `${req.protocol}://${req.get('host')}/api/v1/#all-tours`;
+  await new Email(user, newBooking).bookingConfirm();
   res.redirect(req.originalUrl.split('?')[0]);
 });
 

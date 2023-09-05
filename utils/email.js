@@ -65,4 +65,11 @@ module.exports = class Email {
       'Your password reset token (only valid for 10 minutes) '
     );
   }
+
+  async bookingConfirm() {
+    await this.send(
+      'booking',
+      'Welcome to the Natours family! Thank you for booking awesome tour! '
+    );
+  }
 };

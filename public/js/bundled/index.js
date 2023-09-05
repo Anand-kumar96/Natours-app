@@ -22666,10 +22666,11 @@ var hideAlert = function hideAlert() {
 };
 exports.hideAlert = hideAlert;
 var showAlert = function showAlert(type, msg) {
+  var time = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 2;
   hideAlert();
   var markup = "<div class=\"alert alert--".concat(type, "\">").concat(msg, "</div>");
   document.querySelector('body').insertAdjacentHTML('afterbegin', markup);
-  window.setTimeout(hideAlert, 2000);
+  window.setTimeout(hideAlert, time * 1000);
 };
 exports.showAlert = showAlert;
 },{}],"login.js":[function(require,module,exports) {

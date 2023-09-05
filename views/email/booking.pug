@@ -1,0 +1,18 @@
+
+extends baseEmail
+block content 
+
+  p Hey #{firstName},
+    p This is just a quick email to say your booking is confirmed 🎉🙏
+    p  We are pleased to inform you that your booking is confirmed. We're all a big family here, so If your booking doesn't show up here immediately, please come back later
+    table.btn.btn-primary(role='presentation' border='0' cellpadding='0' cellspacing='0')
+      tbody
+        tr
+          td(align='left')
+            table(role='presentation' border='0' cellpadding='0' cellspacing='0')
+              tbody
+                tr
+                  td
+                    a(href=`${url}` target='_blank') book another tour
+    p If you need any help with booking your next tour, please don't hesitate to contact me!
+    p - Anand Kumar, CEO
