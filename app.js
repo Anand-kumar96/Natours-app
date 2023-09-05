@@ -66,7 +66,6 @@ app.use(
   })
 );
 
-////////////
 // LIMIT REQUEST FROM SAME IP
 // install rate limiter=> npm i express-rate-limit //limiter=>  this is middleware
 const limiter = rateLimit({
