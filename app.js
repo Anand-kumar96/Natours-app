@@ -17,7 +17,6 @@ const reviewRouter = require('./routes/reviewRoutes');
 const AppError = require('./utils/appError');
 const viewRouter = require('./routes/viewRoutes');
 const { globalErrorHandler } = require('./controllers/errorController');
-const { webHookCheckout } = require('./controllers/bookingController');
 
 const app = express();
 app.use(cors());
@@ -75,12 +74,7 @@ const limiter = rateLimit({
   message: 'Too many request with same IP. please try again in an hour.'
 });
 app.use('/api', limiter); // applicable on all routes start with api
-//webHook
-app.post(
-  '/webhook-checkout',
-  express.raw({ type: 'application/json' }),
-  webHookCheckout
-);
+
 //DEVELOPMENT LOGGING
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
