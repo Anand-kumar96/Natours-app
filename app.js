@@ -17,6 +17,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const AppError = require('./utils/appError');
 const viewRouter = require('./routes/viewRoutes');
 const { globalErrorHandler } = require('./controllers/errorController');
+const { webhookCheckout } = require('./controllers/bookingController');
 
 const app = express();
 // view template engine setting i.e pug
@@ -76,7 +77,12 @@ const limiter = rateLimit({
   message: 'Too many request with same IP. please try again in an hour.'
 });
 app.use('/api', limiter); // applicable on all routes start with api
-
+// we need the body in raw form so i used here
+app.post(
+  '/checkout-session',
+  express.raw({ type: 'application/json' }),
+  webhookCheckout
+);
 //DEVELOPMENT LOGGING
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
