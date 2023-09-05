@@ -65,7 +65,7 @@ exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
   const newUser = await User.findById(user);
   await new Email(newUser, newBooking).bookingConfirm();
-  res.redirect(req.originalUrl.split('?')[0]);
+  res.redirect(`${req.originalUrl.split('?')[0]}?alert=booking`);
 });
 
 exports.getBooking = factory.getOne(Booking);

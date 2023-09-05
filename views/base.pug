@@ -9,10 +9,10 @@ html
       link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
       title Natours | #{title}
 
-  body
+  body(data-alert=`${alert ? alert : ''}`)
     //Header
     include _header
-    
+
     //- include _headerBox
 
     //Content

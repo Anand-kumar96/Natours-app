@@ -9,6 +9,7 @@ import { login, logout } from './login';
 import { updateSettings } from './updateSettings';
 import { signup } from './signup';
 import { bookTour } from './stripe';
+import { showAlert } from './alerts';
 
 //DOM element
 const mapBox = document.getElementById('map');
@@ -18,7 +19,6 @@ const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const logOutBtn = document.querySelector('.nav__el--logout');
 const bookBtn = document.getElementById('book-tour');
-
 
 //DELEGATION
 if (mapBox) {
@@ -41,7 +41,7 @@ if (loginForm) {
 if (signupForm) {
   signupForm.addEventListener('submit', e => {
     e.preventDefault();
-      e.target.querySelector('.btn').textContent = 'Processing...';
+    e.target.querySelector('.btn').textContent = 'Processing...';
     const name = document.querySelector('.signup-name').value;
     const email = document.querySelector('.signup-email').value;
     const password = document.querySelector('.signup-password').value;
@@ -68,11 +68,6 @@ if (userDataForm) {
     form.append('name', document.getElementById('name').value);
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
-
-    // const name = document.getElementById('name').value;
-    // const email = document.getElementById('email').value;
-    // const photo = document.getElementById('photo').files[0];
-    // updateSettings({ name, email,photo }, 'data');
     updateSettings(form, 'data');
   });
 }
@@ -105,4 +100,12 @@ if (bookBtn) {
     const tourId = e.target.dataset.tourId;
     bookTour(tourId);
   });
+}
+
+const alertMessage = document.querySelector('body').dataset.alert;
+if (alertMessage) {
+  showAlert('success', alertMessage, 10);
+  window.setTimeout(() => {
+    location.assign('/');
+  }, 10000);
 }

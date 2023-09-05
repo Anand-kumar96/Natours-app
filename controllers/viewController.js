@@ -5,6 +5,15 @@ const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 // const User = require('../model/userModel');
 
+//ALERT
+exports.alerts = (req, res, next) => {
+  const { alert } = req.query;
+  if (alert === 'booking') {
+    res.locals.alert =
+      "Your booking was successful! Please check you email for a confirmation. if your booking doesn't show up immediately please come back later.";
+  }
+  next();
+};
 //GET OVERVIEW
 exports.getOverview = catchAsync(async (req, res, next) => {
   // 1) Get tour data from collection
