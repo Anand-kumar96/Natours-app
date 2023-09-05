@@ -7,8 +7,8 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const compression = require('compression');
-const cors = require('cors');
+// const compression = require('compression');
+// const cors = require('cors');
 
 const bookingRouter = require('./routes/bookingRoutes');
 const tourRouter = require('./routes/tourRoutes');
@@ -27,7 +27,7 @@ app.set('views', path.join(__dirname, 'views'));
 //Global Middleware
 
 //Access-control-allow-Origin
-app.use(cors()); // implement Cors
+// app.use(cors()); // implement Cors
 //serving static file
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -94,7 +94,7 @@ app.use(cookieParser()); //cookie -parse
 app.use(express.urlencoded({ extended: true, limit: '16kb' })); // DATA PARSER FROM FORM
 app.use(mongoSanitize()); //Data Sanitization against NO SQL query injection
 app.use(xss()); //Data Sanitization against XSS
-app.use(compression());
+// app.use(compression());
 //prevent parameter population
 app.use(
   hpp({
