@@ -107,5 +107,5 @@ if (alertMessage) {
   showAlert('success', alertMessage, 10);
   window.setTimeout(() => {
     location.assign('/');
-  }, 10000);
+  }, 9000);
 }

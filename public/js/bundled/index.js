@@ -61420,7 +61420,7 @@ if (alertMessage) {
   (0, _alerts.showAlert)('success', alertMessage, 10);
   window.setTimeout(function () {
     location.assign('/');
-  }, 10000);
+  }, 9000);
 }
 },{"core-js/stable":"../../node_modules/core-js/stable/index.js","regenerator-runtime/runtime":"../../node_modules/regenerator-runtime/runtime.js","./mapbox":"mapbox.js","./login":"login.js","./updateSettings":"updateSettings.js","./signup":"signup.js","./stripe":"stripe.js","./alerts":"alerts.js"}]},{},["index.js"], null)
 //# sourceMappingURL=/index.js.map
