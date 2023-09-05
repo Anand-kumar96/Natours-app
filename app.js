@@ -8,6 +8,7 @@ const hpp = require('hpp');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const compression = require('compression');
 
 const bookingRouter = require('./routes/bookingRoutes');
 const tourRouter = require('./routes/tourRoutes');
@@ -90,7 +91,7 @@ app.use(mongoSanitize()); // after calling the function return middleware functi
 
 //Data Sanitization against XSS
 app.use(xss()); // after calling the function return middleware function
-
+app.use(compression());
 //prevent parameter pollution
 app.use(
   hpp({
