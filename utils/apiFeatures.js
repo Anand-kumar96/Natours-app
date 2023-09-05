@@ -14,7 +14,7 @@ class APIFeatures {
     let queryStr = JSON.stringify(queryObject);
     queryStr = queryStr.replace(/\b(gte|lte|gt|lt)\b/g, match => `$${match}`);
     this.query = this.query.find(JSON.parse(queryStr));
-    return this;
+    return this; // returning all object so that we can chain
   }
 
   //SORTING FEATURES
@@ -27,8 +27,8 @@ class APIFeatures {
     }
     return this;
   }
-
   //FIELDS FEATURES
+
   limitFields() {
     if (this.queryString.fields) {
       const fields = this.queryString.fields.split(',').join(' ');
@@ -45,6 +45,8 @@ class APIFeatures {
     const limit = this.queryString.limit * 1 || 100;
     const skip = (page - 1) * limit;
     this.query = this.query.skip(skip).limit(limit);
+
+    // if skip is greater than total documents
     if (this.queryString.page) {
       if (skip >= this.numTours) throw new Error('This Page does not exist');
     }

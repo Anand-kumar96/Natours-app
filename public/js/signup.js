@@ -1,8 +1,6 @@
 /*eslint-disable */
 import axios from 'axios';
 import { showAlert } from './alerts';
-
-//SIGNUP
 export const signup = async data => {
   try {
     const res = await axios({

@@ -2,7 +2,6 @@ const APIFeatures = require('../utils/apiFeatures');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
 
-//DELETE
 exports.deleteOne = (Model, collectionName) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
@@ -15,7 +14,6 @@ exports.deleteOne = (Model, collectionName) =>
     });
   });
 
-// UPDATE
 exports.updateOne = (Model, collectionName) =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findOneAndUpdate({ _id: req.params.id }, req.body, {
@@ -33,7 +31,6 @@ exports.updateOne = (Model, collectionName) =>
     });
   });
 
-// CREATE
 exports.createOne = Model =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.create(req.body);
@@ -48,7 +45,6 @@ exports.createOne = Model =>
     });
   });
 
-//GET ONE
 exports.getOne = (Model, collectionName, populateOptions) =>
   catchAsync(async (req, res, next) => {
     let query = Model.findById(req.params.id);
@@ -67,7 +63,6 @@ exports.getOne = (Model, collectionName, populateOptions) =>
     });
   });
 
-// GET ALL
 exports.getAll = Model =>
   catchAsync(async (req, res, next) => {
     // To allow for nested GET reviews on tour (hack)

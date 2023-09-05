@@ -4,10 +4,11 @@ const Tour = require('./../model/tourModel');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 const AppError = require('../utils/appError');
+// const APIFeatures = require('../utils/apiFeatures');
 
-// UPLOAD TOUR IMAGE USING MULTER
+// for uploading tourImages
 const multerStorage = multer.memoryStorage();
-// to check uploading file is image type or not
+//multer filter // to check file is image or not
 const multerFilter = (req, file, cb) => {
   if (file.mimetype.startsWith('image')) {
     cb(null, true);
@@ -20,14 +21,12 @@ const upload = multer({
   storage: multerStorage,
   fileFilter: multerFilter
 });
-//upload.single('photo); // req.file
-//upload.array('images',5);// req.files
-// for mixed use fields
+
 exports.uploadTourImages = upload.fields([
   { name: 'imageCover', maxCount: 1 },
   { name: 'images', maxCount: 3 }
 ]);
-// resizing image middleware
+
 exports.resizeTourImages = catchAsync(async (req, res, next) => {
   if (!req.files.imageCover || !req.files.images) return next();
 
@@ -58,8 +57,10 @@ exports.resizeTourImages = catchAsync(async (req, res, next) => {
   req.body.images = images;
   next();
 });
+//upload.single('photo); // req.file
+//upload.array('images',5);// req.files
 
-// TOP 5 CHEAP TOUR
+//ALIAS FEATURES FOR=>top-5-cheap-tour // we can create n number of alias route
 exports.aliasTopTour = (req, res, next) => {
   req.query.limit = '5';
   req.query.sort = 'price ratingsAverage, ';
@@ -67,15 +68,93 @@ exports.aliasTopTour = (req, res, next) => {
     'name, price, duration, difficulty, ratingsAverage, summary';
   next();
 };
-
-// ALL ENDPOINTS USING HANDLE FACTORY FUNCTION
+// using factory handler function
 exports.getAllTours = factory.getAll(Tour);
 exports.getTour = factory.getOne(Tour, 'Tour', 'reviews');
 exports.createTour = factory.createOne(Tour);
 exports.updateTour = factory.updateOne(Tour, 'Tour');
 exports.deleteTour = factory.deleteOne(Tour, 'Tour');
 
-//GET TOUR STATS => AGGREGATION PIPELINE
+// exports.getAllTours = catchAsync(async (req, res, next) => {
+//   const numTours = await Tour.countDocuments();
+//   // BUILDING QUERY
+//   const features = new APIFeatures(Tour.find(), req.query, numTours)
+//     .filter()
+//     .sort()
+//     .limitFields()
+//     .paginate();
+
+//   // EXECUTING QUERY
+//   const tours = await features.query;
+
+//   //SEND RESPONSE
+//   res.status(200).json({
+//     status: 'success',
+//     result: tours.length,
+//     data: {
+//       tours: tours
+//     }
+//   });
+// });
+
+//getTour
+// exports.getTour = catchAsync(async (req, res, next) => {
+//   const tour = await Tour.findById(req.params.id).populate('reviews');
+//   //for populating tour guide
+//   // const tour = await Tour.findById(req.params.id).populate('guides'); //=> handle by query middleware
+//   // handling 404 error
+//   if (!tour) {
+//     return next(new AppError('No tour found with this Id', 404));
+//   }
+//   res.status(200).json({
+//     status: 'success',
+//     data: {
+//       tour: tour
+//     }
+//   });
+// });
+
+// //create Tour
+// exports.createTour = catchAsync(async (req, res, next) => {
+//   const newTour = await Tour.create(req.body);
+//   res.status(200).json({
+//     status: 'success',
+//     data: {
+//       tour: newTour
+//     }
+//   });
+// });
+
+// patch
+// exports.updateTour = catchAsync(async (req, res, next) => {
+//   const tour = await Tour.findByIdAndUpdate(req.params.id, req.body, {
+//     new: true,
+//     runValidators: true
+//   });
+//   if (!tour) {
+//     return next(new AppError('No tour found with this Id', 404));
+//   }
+//   res.status(200).json({
+//     status: 'success',
+//     data: {
+//       tour: tour
+//     }
+//   });
+// });
+
+//Delete
+// exports.deleteTour = catchAsync(async (req, res, next) => {
+//   const tour = await Tour.findByIdAndDelete(req.params.id);
+//   if (!tour) {
+//     return next(new AppError('No tour found with this Id', 404));
+//   }
+//   res.status(204).json({
+//     status: 'success',
+//     data: null
+//   });
+// });
+
+//AGGREGATION PIPELINE
 exports.getTourStats = catchAsync(async (req, res, next) => {
   const pipeLine = await Tour.aggregate([
     {
@@ -93,7 +172,7 @@ exports.getTourStats = catchAsync(async (req, res, next) => {
       }
     },
     {
-      $sort: { avgPrice: 1 }
+      $sort: { avgPrice: 1 } //1 for ASC -1 for DECS
     }
   ]);
   res.status(200).json({
@@ -104,7 +183,6 @@ exports.getTourStats = catchAsync(async (req, res, next) => {
   });
 });
 
-//GET MONTHLY PLAN ENDPOINTS
 exports.getMonthlyPlan = catchAsync(async (req, res, next) => {
   const year = req.params.year * 1;
   const monthlyPlan = await Tour.aggregate([
@@ -150,8 +228,8 @@ exports.getMonthlyPlan = catchAsync(async (req, res, next) => {
     }
   });
 });
-
-// FOR MAP
+//tour-within/:distance/center/:latlng/unit/:unit
+//tours-within/233/center/12.967234,77.702556/unit/km
 exports.getToursWithin = catchAsync(async (req, res, next) => {
   const { distance, latlng, unit } = req.params;
   const [lat, lng] = latlng.split(',');
@@ -178,7 +256,6 @@ exports.getToursWithin = catchAsync(async (req, res, next) => {
   });
 });
 
-// TO CALCULATE DISTANCE
 exports.getDistances = catchAsync(async (req, res, next) => {
   const { latlng, unit } = req.params;
   const [lat, lng] = latlng.split(',');
