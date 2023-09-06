@@ -23,11 +23,11 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
   - [Useful resources](#useful-resources)
   - [Author](#author)
 
-## Overview :pencil2:
+## Overview 
 ### Demo 🚀
 Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 
-### Description
+### Description :blue_book:
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This is web based live App of Tour Booking. This project combines both front-end and back-end technologies to create a seamless user experience and efficient management of tour-related data. Below is a detailed description of the key features of  tour booking full-stack project.
 #### Key Features 📝
 * Authentication and Authorization
