@@ -13,7 +13,7 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
   - [Demo](#Demo)
   - [Description](#Description)
   - [Demonstration](#Demonstration)
-  - [How To Use](#how-to-use)
+  - [How To Use](#how-to-use-)
   - [API Usage](#api-usage) 
   - [Build With](#build-with)
   - [Setup-Installation-Requirements](#Setup-Installation-Requirements)
@@ -96,7 +96,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 #### Admin Profile :
 ![Admin-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/19ddc75b-83e4-446f-81ac-2e48304040c1.gif)
 
-## How To Use  &nbsp;🤔
+## How To Use 🤔
 
 ### Book a tour
 * Signup to the site
