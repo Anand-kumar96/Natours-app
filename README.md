@@ -30,7 +30,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 ### Description
 
 This is web based live App of Tour Booking. This project combines both front-end and back-end technologies to create a seamless user experience and efficient management of tour-related data. Below is a detailed description of the key components and features of a tour booking full-stack project.
-## Key Features 📝
+#### Key Features 📝
 * Authentication and Authorization
   - Sign up, Log in, Logout, Update, and reset password.
 * User profile
