@@ -94,5 +94,5 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 
 
 #### Admin Profile :
-![User-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/6fdcdbe9-8a5b-4675-84e7-7a06ea8da8d2.gif)
+![Admin-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/19ddc75b-83e4-446f-81ac-2e48304040c1.gif)
 
