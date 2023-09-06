@@ -10,7 +10,7 @@
 This is an awesome tour booking site built on top of <a href="https://nodejs.org/en/" target="_blank">NodeJS</a>.
 ## Table of contents
 
-  - [Demo 🚀](#Demo 🚀)
+  - [Demo](#Demo)
   - [Description](#Description)
   - [Demonstration](#Demonstration)
   - [How To Use](#how-to-use)
@@ -24,7 +24,7 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
   - [Author](#author)
 
 ## Overview
-### Demo 🚀
+### Demo
 Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 
 ### Description
