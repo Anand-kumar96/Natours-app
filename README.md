@@ -157,7 +157,7 @@ The website is deployed with git into <a href ="https://render.com/">Render</a>.
 - set up Environment Variables
 - add Secret Files
 - deployed.
-* Finished!
 ```
+* Finished!
 
 
