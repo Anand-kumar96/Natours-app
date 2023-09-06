@@ -11,8 +11,8 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
 ## Table of contents
 
   - [Demo](#Demo-)
-  - [Description](#Description-)
-  - [Demonstration](#Demonstration-)
+  - [Description](#Description)
+  - [Demonstration](#Demonstration)
   - [How To Use](#how-to-use-)
   - [API Usage](#api-usage) 
   - [Build With](#build-with)
