@@ -110,7 +110,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 * Proceed to the payment checkout page
 * Enter shipping address details (Test Mood):
   ```
-  - address : Howard Street
+  - address : Howard Street 
   - city : Hastings
   - Zip Code: 13076
   - State : NewYork
