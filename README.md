@@ -146,3 +146,18 @@ Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostma
  *  Get Monthly Plan 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/monthly-plan/2021
  *  Get Tours Within Radius 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/distances/34.111745,-118.113491/unit/mi
 
+## Deployment 🚀
+The website is deployed with git into Render. Below are the steps taken:
+```
+create an account on render
+create a web service and give a name
+select github repository for your Web Service
+Build Command : npm install
+Start Command : node server.js (or your root file)
+Set up Environment Variables
+Add Secret Files
+then deployed.
+* Finished!
+```
+
+
