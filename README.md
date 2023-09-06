@@ -77,28 +77,28 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
  
 ## Demonstration 💻
 #### Sign-up Page :
-![Sign-up](https://github.com/Anand-kumar96/Natours-app/assets/106487247/9f2cc60a-0005-4ce4-9709-9b96558ca0d9.gif)
+![Sign-up](https://github.com/Anand-kumar96/Natours-app/assets/106487247/0fa43787-1e68-470d-ba47-7f95dfcbeb78.gif)
 
 #### Sign-in Page :
-![Sign-in](https://github.com/Anand-kumar96/Natours-app/assets/106487247/fa3f12df-5b01-4574-9ed2-ed5a3267657f.gif)
+![Sign-in](https://github.com/Anand-kumar96/Natours-app/assets/106487247/56b52d2e-7388-4f0a-801e-9a15c95f2fc5.gif)
 
 #### Home Page :
 ![Home-Page](https://github.com/Anand-kumar96/Natours-app/assets/106487247/6fa4ff48-f725-4060-a123-d6a88a43c998.gif)
 
 #### Tour Details :
-![Tour-details](https://github.com/Anand-kumar96/Natours-app/assets/106487247/c8939ec9-3662-41ea-a269-07d3968107c4.gif)
+![Tour-details](https://github.com/Anand-kumar96/Natours-app/assets/106487247/41101dca-3cd6-4ad5-a4de-018afb26db80.gif)
 
 #### Payment Process :
-![Payment-Process](https://github.com/Anand-kumar96/Natours-app/assets/106487247/2da50117-cf3e-462f-a9e2-9592b2b4d163.gif)
+![Payment-Process](https://github.com/Anand-kumar96/Natours-app/assets/106487247/95a349b1-a287-4b50-8a58-9cf78a1ff000.gif)
 
 #### Booked Tours :
 ![Booked-Tours](https://github.com/Anand-kumar96/Natours-app/assets/106487247/d7ebe727-bd26-48c6-ba18-c0fba71d17c0.gif)
 
 #### User Profile :
-![User-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/342390b8-a9d6-4c99-b4e6-05459074fc57)
+![User-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/c548c96e-d830-480f-b2b2-bf3e24955409.gif)
 
 #### Admin Profile :
-![Admin-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/19ddc75b-83e4-446f-81ac-2e48304040c1.gif)
+![Admin-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/a93d72cc-96ab-4889-9661-43bb4e641764.gif)
 
 ## How To Use 🫠
 
