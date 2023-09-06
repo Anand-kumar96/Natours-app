@@ -167,7 +167,7 @@ Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostma
     tour.
   * [Render](https://render.com/) - Cloud platform
 
-## Setup Installation Requirements 🚀
+## Setup Installation Requirements ⚙️
 
 If you wish to play around with the code base in your local environment,then follow these steps:
 ```
