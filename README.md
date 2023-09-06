@@ -11,25 +11,25 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
 ## Table of contents
 
   - [Demo](#Demo-)
-  - [Description](#Description-:computer:)
-  - [Demonstration](#Demonstration)
+  - [Description](#Description-)
+  - [Demonstration](#Demonstration-)
   - [How To Use](#how-to-use-)
-  - [API Usage](#api-usage) 
-  - [Build With](#build-with)
-  - [Setup-Installation-Requirements](#Setup-Installation-Requirements)
-  - [Deployment](#deployment)
-  - [To-do](#to-do)
-  - [Known Bugs](#known-Bugs)
-  - [Useful resources](#useful-resources)
-  - [Author](#author)
+  - [API Usage](#api-usage-) 
+  - [Build With](#build-with-)
+  - [Setup-Installation-Requirements](#Setup-Installation-Requirements-)
+  - [Deployment](#deployment-)
+  - [To-do](#to-do-)
+  - [Known Bugs](#known-Bugs-)
+  - [Useful resources](#useful-resources-)
+  - [Author](#author-)
 
 ## Overview 
 ### Demo 🚀
 Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 
-### Description :blue_book:
+### Description 📑
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This is web based live App of Tour Booking. This project combines both front-end and back-end technologies to create a seamless user experience and efficient management of tour-related data. Below is a detailed description of the key features of  tour booking full-stack project.
-#### Key Features :memo:
+#### Key Features 📝
 * Authentication and Authorization
   - Implemented secure user authentication and authorization mechanisms to protect user data and ensure the privacy and security of user accounts.
   - Implemented Sign up, Log in, Logout, Update, and reset password functionality.
@@ -70,8 +70,12 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
     it is already a favorite.
 * Credit card Payment
   - Except admin any user can book any tour via doing credit card payment.
+* Email
+  - After successful Sign-up user get Welcome email to their registered email of account.
+  - User get reset password link to their registered email after clicking forget password.
+  - User get booking confirmation to thier registered email after making successful payment.
  
-## Demonstration :computer:
+## Demonstration 💻
 #### Sign-up Page :
 ![Sign-up](https://github.com/Anand-kumar96/Natours-app/assets/106487247/9f2cc60a-0005-4ce4-9709-9b96558ca0d9.gif)
 
@@ -96,7 +100,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 #### Admin Profile :
 ![Admin-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/19ddc75b-83e4-446f-81ac-2e48304040c1.gif)
 
-## How To Use 🤔
+## How To Use 🫠
 
 ### Book a tour
 * Signup to the site
