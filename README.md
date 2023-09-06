@@ -24,7 +24,8 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
   - [Author](#author)
 
 ## Overview
-### Demo  🚀
+### Demo
+🚀
 Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 
 ### Description
