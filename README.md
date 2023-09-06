@@ -153,8 +153,8 @@ Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostma
 * [Mongoose](https://mongoosejs.com/) - Object Data Modelling (ODM) library for 
   MongoDB
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) - Cloud database service
-* [JSON Web Token](https://jwt.io/) - Security token
-* [Postman](https://www.getpostman.com/) - API testing
+* [JSON Web Token](https://jwt.io/) - Security token generator
+* [Postman](https://www.getpostman.com/) - API platform for building and testing API
 * [Pug](https://pugjs.org/api/getting-started.html) - High performance template 
   engine
 * [ParcelJS](https://parceljs.org/) - Blazing fast, zero configuration web 
