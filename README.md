@@ -142,12 +142,8 @@ Check 👉🏻 [Natours API Documentation](https://documenter.getpostman.com/vie
 <b> Some API Features: </b>
 
 All Tours 👉🏻 https://natours-9d20.onrender.com/api/v1/tours
-
 Tours stats 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/tour-stats
-
 Get Top 5 Cheap Tours 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/top-5-cheap-tours
-
 Get Monthly Plan 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/monthly-plan/2021
-
 Get Tours Within Radius 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/distances/34.111745,-118.113491/unit/mi
 
