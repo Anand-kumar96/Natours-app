@@ -85,7 +85,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 ![Tour-details](https://github.com/Anand-kumar96/Natours-app/assets/106487247/c8939ec9-3662-41ea-a269-07d3968107c4.gif)
 
 #### Payment Process :
-![paymentprocess-1-ycnhrceamp4-7fW](https://user-images.githubusercontent.com/58518192/72606973-d9eff900-3949-11ea-9a2e-f84a6581bef3.gif)
+![Payment-Process](https://github.com/Anand-kumar96/Natours-app/assets/106487247/2da50117-cf3e-462f-a9e2-9592b2b4d163.gif)
 
 #### Booked Tours :
 ![rsz_bookedtours](https://user-images.githubusercontent.com/58518192/72607747-6a7b0900-394b-11ea-8b9f-5330531ca2eb.png)
