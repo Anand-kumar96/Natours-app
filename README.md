@@ -138,10 +138,16 @@ Before using the API, you need to set the environment variables in Postman depen
   - {{password}} with your user password as value.
   ```
 Check 👉🏻 [Natours API Documentation](https://documenter.getpostman.com/view/28574510/2s9Y5Wx3dW) for more info.
+
 <b> Some API Features: </b>
+
 All Tours 👉🏻 https://natours-9d20.onrender.com/api/v1/tours
+
 Tours stats 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/tour-stats
+
 Get Top 5 Cheap Tours 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/top-5-cheap-tours
+
 Get Monthly Plan 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/monthly-plan/2021
+
 Get Tours Within Radius 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/distances/34.111745,-118.113491/unit/mi
 
