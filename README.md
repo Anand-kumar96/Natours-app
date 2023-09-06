@@ -161,12 +161,46 @@ Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostma
   application bundler
 * [Stripe](https://stripe.com/) - Online payment API and Making payments on the 
   app.
-* [Mailtrap](https://mailtrap.io/) & [brevo](https://app.brevo.com/) - Email 
+* [Mailtrap](https://mailtrap.io/) & [Brevo](https://app.brevo.com/) - Email 
   delivery platform
 * [LeafLet](https://leafletjs.com/) - Displaying the different locations of each 
   tour.
 * [Render](https://render.com/) - Cloud platform
-  
+
+## Setup-Installation-Requirements
+If you wish to play around with the code base in your local environment,then follow these steps:
+
+```
+* Clone this repo to your local machine.
+* Using the terminal, navigate to the cloned repo.
+* Install all the necessary dependencies, as stipulated in the package.json file.
+* If you don't already have any account, set up accounts with: MONGODB, LEAFLET, STRIPE, BREAVO, and MAILTRAP. Please ensure to have at least basic knowledge of how these services work. Otherwise go through respective documentation.
+* In your .env file, set environment variables for the following:
+    * NODE_ENV = development
+    * DATABASE = Your_MongoDB_database_Url
+    * PASSWORD = Your_MongoDB_password
+
+    * JWT_SECRET = Your_JSON_Web_Token_Secret_Key
+    * JWT_EXPIRES_IN = 90d
+    * JWT_COOKIES_EXPIRES_IN = 90
+
+    * EMAIL_USERNAME = Your_Mailtrap_username
+    * EMAIL_PASSWORD = Your_Mailtrap_password
+    * EMAIL_HOST= Mailtrap_Host_Name(sandbox.smtp.mailtrap.io)
+    * EMAIL_PORT= Mailtrap_Email_Port
+    * EMAIL_FROM = Your_Email_Address
+
+    * BREVO_HOST = Brevo(smtp-relay.brevo.com)
+    * BREVO_PORT = Brevo_Email_Port
+    * BREVO_LOGIN = Your_Brevo_username
+    * BREVO_SMTP_PASSWORD = Your_Brevo_password
+
+    * STRIPE_SECRET_KEY = Stripe_Secret_Key
+    * STRIPE_PUBLIC_KEY = Stripe_Public_Key
+
+* Start the server.
+* Your app should be running just fine.
+```
 ## Deployment 🚀
 The website is deployed with git into <a href ="https://render.com/">Render</a>. Below are the steps taken:
 ```
