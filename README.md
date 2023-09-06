@@ -147,9 +147,9 @@ Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostma
  *  Get Tours Within Radius 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/distances/34.111745,-118.113491/unit/mi
 
 ## Deployment 🚀
-The website is deployed with git into Render. Below are the steps taken:
+The website is deployed with git into <a href ="https://render.com/">Render</a>. Below are the steps taken:
 ```
-- create an account on [render](https://render.com/) (Ex:Natours-app)
+- create an account on render((Ex:Natours-app)
 - create a web service and give a name
 - select github repository for your Web Service
 - Build Command : npm install
