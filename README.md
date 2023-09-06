@@ -118,12 +118,10 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
   - CVV: 224
   ```
 * Finished!
-
-### Manage your booking
-
+  
+#### Manage your booking
 * Check the tour you have booked on the "Manage Booking" page in your user settings. You'll be automatically redirected to this
   page after you have completed the booking.
 
-### Update your profile
-
+#### Update your profile
 * You can update your own username, email, profile photo and password.
