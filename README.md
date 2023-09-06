@@ -74,7 +74,7 @@ This is web based live App of Tour Booking. This project combines both front-end
  
 ## Demonstration 🖥️
 #### Sign-up Page :
-![Sign-up](https://github.com/Anand-kumar96/Natours-app/assets/106487247/b21135d4-b6d3-462d-9484-55a9c445839d)
+![Sign-up](https://github.com/Anand-kumar96/Natours-app/assets/106487247/1f2bab1c-e565-479f-a895-56bc55b6abca)
 
 #### Tour Details :
 ![tourOverviewonline-video-cutterc](https://user-images.githubusercontent.com/58518192/72606859-a0b78900-3949-11ea-8f0d-ef44c789957b.gif)
