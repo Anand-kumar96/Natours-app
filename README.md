@@ -201,6 +201,7 @@ If you wish to play around with the code base in your local environment,then fol
 * Start the server.
 * Your app should be running just fine.
 ```
+`.env` file :
 
 ## Deployment 🚀
 The website is deployed with git into <a href ="https://render.com/">Render</a>. Below are the steps taken:
