@@ -28,7 +28,7 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
 Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 
 ### Description
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This is web based live App of Tour Booking. This project combines both front-end and back-end technologies to create a seamless user experience and efficient management of tour-related data. Below is a detailed description of the key components and features of a tour booking full-stack project.
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This is web based live App of Tour Booking. This project combines both front-end and back-end technologies to create a seamless user experience and efficient management of tour-related data. Below is a detailed description of the key components and features of a tour booking full-stack project.
 #### Key Features 📝
 * Authentication and Authorization
   - Implemented secure user authentication and authorization mechanisms to protect user data and ensure the privacy and security of user accounts.
@@ -91,7 +91,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 ![rsz_bookedtours](https://user-images.githubusercontent.com/58518192/72607747-6a7b0900-394b-11ea-8b9f-5330531ca2eb.png)
 
 #### User Profile :
-![rsz_userprofile](https://user-images.githubusercontent.com/58518192/72607635-44edff80-394b-11ea-8943-64c48f6f19aa.png)
+![User-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/6fdcdbe9-8a5b-4675-84e7-7a06ea8da8d2.gif)
 
 #### Admin Profile :
 ![rsz_adminprofile](https://user-images.githubusercontent.com/58518192/72607648-4d463a80-394b-11ea-972f-a73160cfaa5b.png)
