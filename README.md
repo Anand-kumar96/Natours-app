@@ -35,16 +35,17 @@ This is web based live App of Tour Booking. This project combines both front-end
   - Implemented secure user authentication and authorization mechanisms to protect user data and ensure the privacy and security of user accounts.
   - Implemented Sign up, Log in, Logout, Update, and reset password functionality.
 * User profile
-  - Update username, photo, email, password, and other information
-  - A user can be either a regular user or an admin or a lead guide or a 
-    guide.
-  - When a user signs up, that user by default regular user.
+  - Update username, email, password, photo and other information
+  - A user can be either be a regular user or an admin or a lead-guide or 
+    a guide.
+  - When a user signs up, that user by default be a regular user.
+  - A user can delete their account But it will still be in database as 
+    user will be inactive. but only admin can permanently delete user account. 
 * Tour
-  - Manage booking, check tour map, check users' reviews and rating
-  - Tours can be created by an admin user or a lead-guide.
-  - Tours can be seen by every user.
-  - Tours can be updated by an admin user or a lead guide.
-  - Tours can be deleted by an admin user or a lead-guide.
+  - Manage booking, check tour map, check users, reviews and ratings.
+  - Tours can be created, updated or deleted by an admin or a lead-guide 
+    only.
+  - All Tours can be seen by every user.
 * Bookings
   - Only regular users can book tours (make a payment).
   - Regular users can not book the same tour twice.
@@ -69,3 +70,4 @@ This is web based live App of Tour Booking. This project combines both front-end
   - A regular user can not add a tour to their list of favorite tours when 
     it is already a favorite.
 * Credit card Payment
+  - Except admin any user can book any tour via doing credit card payment.
