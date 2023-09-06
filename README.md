@@ -146,6 +146,27 @@ Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostma
  *  Get Monthly Plan 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/monthly-plan/2021
  *  Get Tours Within Radius 👉🏻 https://natours-9d20.onrender.com/api/v1/tours/distances/34.111745,-118.113491/unit/mi
 
+## Build With 🎯
+
+* [NodeJS](https://nodejs.org/en/) - JS runtime environment
+* [Express](http://expressjs.com/) - Node.js web application framework used
+* [Mongoose](https://mongoosejs.com/) - Object Data Modelling (ODM) library for 
+  MongoDB
+* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) - Cloud database service
+* [JSON Web Token](https://jwt.io/) - Security token
+* [Postman](https://www.getpostman.com/) - API testing
+* [Pug](https://pugjs.org/api/getting-started.html) - High performance template 
+  engine
+* [ParcelJS](https://parceljs.org/) - Blazing fast, zero configuration web 
+  application bundler
+* [Stripe](https://stripe.com/) - Online payment API and Making payments on the 
+  app.
+* [Mailtrap](https://mailtrap.io/) & [brevo](https://app.brevo.com/) - Email 
+  delivery platform
+* [LeafLet](https://leafletjs.com/) - Displaying the different locations of each 
+  tour.
+* [Render](https://render.com/) - Cloud platform
+  
 ## Deployment 🚀
 The website is deployed with git into <a href ="https://render.com/">Render</a>. Below are the steps taken:
 ```
@@ -158,6 +179,5 @@ The website is deployed with git into <a href ="https://render.com/">Render</a>.
 - add Secret Files
 - deployed.
 ```
-* Finished!
 
 
