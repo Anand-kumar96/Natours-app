@@ -10,9 +10,9 @@
 This is an awesome tour booking site built on top of <a href="https://nodejs.org/en/" target="_blank">NodeJS</a>.
 ## Table of contents
 
-  - [Demo](#Demo)
+  - [Demo](#Demo-)
   - [Description](#Description)
-  - [Demonstration](#Demonstration)
+  - [Demonstration](#Demonstration-)
   - [How To Use](#how-to-use-)
   - [API Usage](#api-usage) 
   - [Build With](#build-with)
@@ -23,8 +23,8 @@ This is an awesome tour booking site built on top of <a href="https://nodejs.org
   - [Useful resources](#useful-resources)
   - [Author](#author)
 
-## Overview
-### Demo
+## Overview :pencil2:
+### Demo 🚀
 Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 
 ### Description
@@ -71,7 +71,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 * Credit card Payment
   - Except admin any user can book any tour via doing credit card payment.
  
-## Demonstration
+## Demonstration 🖥️
 #### Sign-up Page :
 ![Sign-up](https://github.com/Anand-kumar96/Natours-app/assets/106487247/9f2cc60a-0005-4ce4-9709-9b96558ca0d9.gif)
 
