@@ -96,7 +96,7 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 #### Admin Profile :
 ![Admin-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/19ddc75b-83e4-446f-81ac-2e48304040c1.gif)
 
-## How To Use 🤔
+## How To Use  &nbsp;🤔
 
 ### Book a tour
 * Signup to the site
