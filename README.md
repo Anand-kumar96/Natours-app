@@ -72,7 +72,7 @@ This is web based live App of Tour Booking. This project combines both front-end
 * Credit card Payment
   - Except admin any user can book any tour via doing credit card payment.
  
-## Demonstration 🖥️
+## Demonstration
 #### Sign-up Page :
 ![Sign-up](https://github.com/Anand-kumar96/Natours-app/assets/106487247/9f2cc60a-0005-4ce4-9709-9b96558ca0d9.gif)
 
