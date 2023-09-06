@@ -137,7 +137,7 @@ Before using the API, you need to set the environment variables in Postman depen
   - {{URL}} with your hostname as value (Eg. http://127.0.0.1:5000 or http://www.example.com)
   - {{password}} with your user password as value.
   ```
-Check 👉🏻 [Natours API Documentation](https://documenter.getpostman.com/view/28574510/2s9Y5Wx3dW) for more info.
+Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostman.com/view/28574510/2s9Y5Wx3dW) for more info.
 
 <b> Some API Features: </b>
  *  All Tours 👉🏻 https://natours-9d20.onrender.com/api/v1/tours
