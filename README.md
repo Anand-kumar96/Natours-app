@@ -149,14 +149,14 @@ Check 👉🏻 [Natours API Documentation 💥💥](https://documenter.getpostma
 ## Deployment 🚀
 The website is deployed with git into Render. Below are the steps taken:
 ```
-create an account on render
-create a web service and give a name
-select github repository for your Web Service
-Build Command : npm install
-Start Command : node server.js (or your root file)
-Set up Environment Variables
-Add Secret Files
-then deployed.
+- create an account on render(Ex:Natours-app)
+- create a web service and give a name
+- select github repository for your Web Service
+- Build Command : npm install
+- Start Command : node server.js (or your root file)
+- Set up Environment Variables
+- Add Secret Files
+- then deployed.
 * Finished!
 ```
 
