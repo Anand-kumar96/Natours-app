@@ -74,7 +74,8 @@ This is web based live App of Tour Booking. This project combines both front-end
  
 ## Demonstration 🖥️
 #### Home Page :
-![natoursHomePageonline-video-cutt](https://user-images.githubusercontent.com/58518192/72606801-7ebe0680-3949-11ea-8e88-613f022a64e5.gif)
+![natoursHomePageonline-video-cutt](
+Uploading Untitled video - Made with Clipchamp.mp4…)
 
 #### Tour Details :
 ![tourOverviewonline-video-cutterc](https://user-images.githubusercontent.com/58518192/72606859-a0b78900-3949-11ea-8f0d-ef44c789957b.gif)
