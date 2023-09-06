@@ -96,3 +96,34 @@ Live demo (Feel free to visit) 👉🏻 : https://natours-9d20.onrender.com
 #### Admin Profile :
 ![Admin-Profile](https://github.com/Anand-kumar96/Natours-app/assets/106487247/19ddc75b-83e4-446f-81ac-2e48304040c1.gif)
 
+## How To Use 🤔
+
+### Book a tour
+* Signup to the site
+* Login to the site
+* Select tours that you want to book
+* Book a tour
+* Proceed to the payment checkout page
+* Enter shipping address details (Test Mood):
+  ```
+  - address : Howard Street
+  - city : Hastings
+  - Zip Code: 13076
+  - State : NewYork
+  ```
+* Enter the card details (Test Mood):
+  ```
+  - Card No. : 4242 4242 4242 4242
+  - Expiry date: 02 / 25
+  - CVV: 224
+  ```
+* Finished!
+
+### Manage your booking
+
+* Check the tour you have booked on the "Manage Booking" page in your user settings. You'll be automatically redirected to this
+  page after you have completed the booking.
+
+### Update your profile
+
+* You can update your own username, email, profile photo and password.
