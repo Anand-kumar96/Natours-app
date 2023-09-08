@@ -66,7 +66,7 @@ exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   if (!tour || !user || !price) return next();
   await Booking.create({ tour, user, price });
   //sending booking confirmation email
-  await new Email(newUser, newBooking).bookingConfirm();
+  new Email(newUser, newBooking).bookingConfirm();
   res.redirect(`${req.originalUrl.split('?')[0]}?alert=booking`);
 });
 
