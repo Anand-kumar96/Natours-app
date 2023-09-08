@@ -1,22 +1,16 @@
 const Booking = require('../model/bookingModel');
 const Tour = require('../model/tourModel');
-const User = require('../model/userModel');
 const APIFeatures = require('../utils/apiFeatures');
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
-const Email = require('../utils/email');
 // const User = require('../model/userModel');
 
 //ALERT
-exports.alerts = async (req, res, next) => {
+exports.alerts = (req, res, next) => {
   const { alert } = req.query;
   if (alert === 'booking') {
     res.locals.alert =
       "Your booking was successful! Please check you email for a confirmation. if your booking doesn't show up immediately please come back later.";
-    const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
-    //sending booking confirmation email
-    const newUser = await User.findById(req.user);
-    await new Email(newUser, newBooking).bookingConfirm();
   }
   next();
 };
