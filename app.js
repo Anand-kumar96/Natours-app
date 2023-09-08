@@ -19,7 +19,7 @@ const viewRouter = require('./routes/viewRoutes');
 const { globalErrorHandler } = require('./controllers/errorController');
 
 const app = express();
-app.enable('trust proxy');
+// app.enable('trust proxy');
 app.use(cors());
 app.options('*', cors());
 // view template engine setting i.e pug
