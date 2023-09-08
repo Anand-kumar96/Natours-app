@@ -285,3 +285,20 @@ Please  feel free to share your opinion, constructive criticism, or comments abo
 * Implement admin remaining Page.
 * Recently Viewed Tours
 * And More! There's always room for improvement!
+
+### Useful resources 📚
+
+- [https://www.w3schools.com/](https://www.w3schools.com/) - This helped me for 
+  strengthening the fundamentals of PUG and CSS. it provides all the concept 
+  from scratch.
+- [https://stackoverflow.com/](https://stackoverflow.com/) - This is an amazing 
+  website for solving your doubts and finding any different approaches. I always 
+  refer to it Whenever I stuck in mid of code or I found unexpected error.
+
+## Author ✍️
+#### Anand Kumar
+- Linkedin - [Anand-kumar96](https://www.linkedin.com/in/anand-kumar96/)
+- GitHub -   [Anand-kumar96](https://github.com/Anand-kumar96)
+
+## License 📄
+This project is open-sourced under the [MIT license](https://opensource.org/licenses/MIT).
