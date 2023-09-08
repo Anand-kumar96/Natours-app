@@ -263,3 +263,14 @@ The website is deployed with git into <a href ="https://render.com/">Render</a>.
 - add Secret Files
 - deployed.
 ```
+
+## To-do 🗒
+
+* Review and rating
+  - Implement Review page so that user can review booked tours from website.
+* Booking
+  - Prevent duplicate bookings after a user has booked that exact tour 
+  - Implement favorite tours page
+* Advanced authentication features
+  - Two-factor authentication
+* And More! There's always room for improvement!
