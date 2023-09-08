@@ -231,7 +231,7 @@ If you wish to play around with the code base in your local environment,then fol
 `example.env` file :
 ![Example](https://github.com/Anand-kumar96/Natours-app/assets/106487247/fa818222-488e-4848-872a-58bb8775e903.png)
 
-## Installation 🛠️
+## Installation 🛠
 You can fork the app or you can clone the app into your local machine. Once done, please install all the
 dependencies by running below command
   ```
