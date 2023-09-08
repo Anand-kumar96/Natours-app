@@ -201,7 +201,8 @@ If you wish to play around with the code base in your local environment,then fol
 * Start the server.
 * Your app should be running just fine.
 ```
-`.env` file :
+`example.env` file :
+![Example](https://github.com/Anand-kumar96/Natours-app/assets/106487247/fa818222-488e-4848-872a-58bb8775e903.png)
 
 ## Deployment 🚀
 The website is deployed with git into <a href ="https://render.com/">Render</a>. Below are the steps taken:
