@@ -13,12 +13,11 @@ exports.alerts = async (req, res, next) => {
   if (alert === 'booking') {
     res.locals.alert =
       "Your booking was successful! Please check you email for a confirmation. if your booking doesn't show up immediately please come back later.";
+    const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
+    //sending booking confirmation email
+    const newUser = await User.findById(req.user);
+    await new Email(newUser, newBooking).bookingConfirm();
   }
-  const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
-
-  //sending booking confirmation email
-  const newUser = await User.findById(req.user);
-  await new Email(newUser, newBooking).bookingConfirm();
   next();
 };
 //GET OVERVIEW
