@@ -1933,6 +1933,13 @@ body {
   font-size: 1.3rem;
   font-weight: 400;
 }
+/* alert */
+.alert {
+  position: fixed;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+}
 
 }
 
