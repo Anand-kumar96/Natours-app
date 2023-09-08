@@ -274,3 +274,14 @@ The website is deployed with git into <a href ="https://render.com/">Render</a>.
 * Advanced authentication features
   - Two-factor authentication
 * And More! There's always room for improvement!
+
+## Known Bugs 🚨
+Feel free to email me at <a>anandaryan542@gmail.com</a> if you run into any issues or have any questions, ideas or concerns.
+Please  feel free to share your opinion, constructive criticism, or comments about my work. Thank you! 🙂
+
+## Future Updates 🪴
+
+* Improve overall UX/UI and fix bugs
+* Implement admin remaining Page.
+* Recently Viewed Tours
+* And More! There's always room for improvement!
