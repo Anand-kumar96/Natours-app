@@ -234,7 +234,7 @@ If you wish to play around with the code base in your local environment,then fol
 ## Installation 🛠️
 You can fork the app or you can clone the app into your local machine. Once done, please install all the
 dependencies by running below command
-```
+  ```
   $ npm install
   Set your env variables
   $ npm run watch:js
@@ -246,8 +246,8 @@ dependencies by running below command
   Setting up ESLint and Prettier in VS Code 👇🏻
   $ npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node
   eslint-plugin-import eslint-plugin-jsx-a11y  eslint-plugin-react --save-dev
-  
-```
+    
+  ```
 
 ## Deployment 🚀
 
