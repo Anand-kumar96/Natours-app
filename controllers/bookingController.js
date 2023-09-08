@@ -63,11 +63,11 @@ exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   const { tour, user, price } = req.query;
   if (!tour || !user || !price) return next();
   await Booking.create({ tour, user, price });
-  const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
+  // const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
 
-  //sending booking confirmation email
-  const newUser = await User.findById(user);
-  await new Email(newUser, newBooking).bookingConfirm();
+  // //sending booking confirmation email
+  // const newUser = await User.findById(user);
+  // await new Email(newUser, newBooking).bookingConfirm();
   res.redirect(`${req.originalUrl.split('?')[0]}?alert=booking`);
 });
 

@@ -86,22 +86,3 @@ exports.getMyTour = catchAsync(async (req, res, next) => {
     tours: tours
   });
 });
-
-//================== WITHOUT API==========================
-// exports.updateUserData = catchAsync(async (req, res, next) => {
-//   const updatedUser = await User.findByIdAndUpdate(
-//     req.user.id,
-//     {
-//       name: req.body.name,
-//       email: req.body.email
-//     },
-//     {
-//       new: true, // for returning updated dataA
-//       runValidators: true
-//     }
-//   );
-//   res.status(200).render('account', {
-//     title: 'Your account',
-//     user: updatedUser
-//   });
-// });
