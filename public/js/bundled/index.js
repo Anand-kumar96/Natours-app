@@ -61320,6 +61320,10 @@ var userDataForm = document.querySelector('.form-user-data');
 var userPasswordForm = document.querySelector('.form-user-password');
 var logOutBtn = document.querySelector('.nav__el--logout');
 var bookBtn = document.getElementById('book-tour');
+var navHomeIcon = document.querySelector('.nav-icon');
+var navCrossIcon = document.querySelector('.nav-cross');
+var navUser = document.querySelector('.nav--user');
+var responsive = document.querySelector('.responsive');
 
 //DELEGATION
 if (mapBox) {
@@ -61422,5 +61426,33 @@ if (alertMessage) {
     location.assign('/');
   }, 9000);
 }
+
+//toggle button
+if (navHomeIcon) {
+  navHomeIcon.addEventListener('click', function () {
+    navUser.classList.add('responsive');
+    navCrossIcon.style.display = 'block';
+    navHomeIcon.style.display = 'none';
+  });
+}
+if (navCrossIcon) {
+  navCrossIcon.addEventListener('click', function () {
+    navUser.classList.remove('responsive');
+    navHomeIcon.style.display = 'block';
+    navCrossIcon.style.display = 'none';
+  });
+}
+window.addEventListener('resize', function () {
+  if (window.matchMedia('(min-width: 770px)').matches) {
+    navHomeIcon.style.display = 'none';
+    navCrossIcon.style.display = 'none';
+    navUser.classList.remove('responsive');
+  }
+  if (navCrossIcon.style.display === 'none') {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      navHomeIcon.style.display = 'block';
+    }
+  }
+});
 },{"core-js/stable":"../../node_modules/core-js/stable/index.js","regenerator-runtime/runtime":"../../node_modules/regenerator-runtime/runtime.js","./mapbox":"mapbox.js","./login":"login.js","./updateSettings":"updateSettings.js","./signup":"signup.js","./stripe":"stripe.js","./alerts":"alerts.js"}]},{},["index.js"], null)
 //# sourceMappingURL=/index.js.map

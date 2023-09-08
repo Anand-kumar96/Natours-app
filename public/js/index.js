@@ -19,6 +19,10 @@ const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const logOutBtn = document.querySelector('.nav__el--logout');
 const bookBtn = document.getElementById('book-tour');
+const navHomeIcon = document.querySelector('.nav-icon');
+const navCrossIcon = document.querySelector('.nav-cross');
+const navUser = document.querySelector('.nav--user');
+const responsive = document.querySelector('.responsive');
 
 //DELEGATION
 if (mapBox) {
@@ -109,3 +113,32 @@ if (alertMessage) {
     location.assign('/');
   }, 9000);
 }
+
+//toggle button
+if (navHomeIcon) {
+  navHomeIcon.addEventListener('click', () => {
+    navUser.classList.add('responsive');
+    navCrossIcon.style.display = 'block';
+    navHomeIcon.style.display = 'none';
+  });
+}
+if (navCrossIcon) {
+  navCrossIcon.addEventListener('click', () => {
+    navUser.classList.remove('responsive');
+    navHomeIcon.style.display = 'block';
+    navCrossIcon.style.display = 'none';
+  });
+}
+
+window.addEventListener('resize', function() {
+  if (window.matchMedia('(min-width: 770px)').matches) {
+    navHomeIcon.style.display = 'none';
+    navCrossIcon.style.display = 'none';
+    navUser.classList.remove('responsive');
+  }
+  if ((navCrossIcon.style.display === 'none')) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      navHomeIcon.style.display = 'block';
+    }
+  }
+});
