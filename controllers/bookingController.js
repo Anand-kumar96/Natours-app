@@ -61,12 +61,13 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
 // @CREATE BOOKING CHECKOUT
 exports.createBookingCheckout = catchAsync(async (req, res, next) => {
   const { tour, user, price } = req.query;
-  const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
-  const newUser = await User.findById(user);
   if (!tour || !user || !price) return next();
   await Booking.create({ tour, user, price });
+  const newBooking = `${req.protocol}://${req.get('host')}/#all-tours`;
+
   //sending booking confirmation email
-  new Email(newUser, newBooking).bookingConfirm();
+  const newUser = await User.findById(user);
+  await new Email(newUser, newBooking).bookingConfirm();
   res.redirect(`${req.originalUrl.split('?')[0]}?alert=booking`);
 });
 
