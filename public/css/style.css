@@ -1657,7 +1657,7 @@ body {
 }
 .close-img {
   display: none;
-  padding: 0.8rem 0rem;
+  margin: 1rem;
   width: 3rem;
   margin-top: -2rem;
   cursor: pointer;
@@ -1680,13 +1680,13 @@ body {
   }
   .responsive {
     background-color: #55c57aca;
-    padding: 6rem 10rem;
+    padding: 5rem 3rem;
     position: absolute;
     right: 0;
+    left: 0;
     top: 6rem;
     display: flex;
     flex-direction: column;
-    border-radius: 0px 0px 10px 10px;
   }
   .responsive > a {
     margin: 0.5rem 0rem;
@@ -1954,8 +1954,11 @@ body {
   }
 
   /* account */
+  .account-menu{
+    padding: 4rem 0rem;
+  }
   .side-img {
-    padding: 0.8rem 0rem;
+    margin: 1rem;
     display: block;
     width: 3rem;
     margin-top: -2rem;
