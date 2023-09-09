@@ -676,7 +676,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   background-color: #fff;
-  padding: 9rem 5rem 9rem 21rem;
+  padding: 7rem 5rem 7rem 21rem;
   border-radius: 2rem;
   -webkit-box-shadow: 0 3rem 8rem 0.5rem rgba(0, 0, 0, 0.15);
   box-shadow: 0 3rem 8rem 0.5rem rgba(0, 0, 0, 0.15);
@@ -1651,6 +1651,17 @@ body {
   z-index: 1;
 }
 
+.side-img {
+  display: none;
+  cursor: pointer;
+}
+.close-img {
+  display: none;
+  padding: 0.8rem 0rem;
+  width: 3rem;
+  margin-top: -2rem;
+  cursor: pointer;
+}
 /* // Media Query*/
 
 /* header */
@@ -1677,7 +1688,7 @@ body {
     flex-direction: column;
     border-radius: 0px 0px 10px 10px;
   }
-  .responsive > a{
+  .responsive > a {
     margin: 0.5rem 0rem;
   }
   .nav-icon {
@@ -1685,10 +1696,10 @@ body {
   }
   /* login */
   .signup-form,
-.login-form {
-  padding: 5rem 2rem;
-  border-radius: 5px;
-}
+  .login-form {
+    padding: 5rem 2rem;
+    border-radius: 5px;
+  }
   .ma-bt-lg {
     margin-bottom: 3rem;
   }
@@ -1698,7 +1709,7 @@ body {
   .btn,
   .btn:link,
   .btn:visited {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 1rem 1.5rem;
     border-radius: 1.5rem;
   }
@@ -1871,76 +1882,108 @@ body {
   }
   /* tour page */
   .heading-primary {
-  font-size: 1.8rem;
-  width: 85%;
-}
-.section-header {
-  height: 50vw;
-}
-.heading-box__group {
-  margin-top: 1.5rem;
-}
-.heading-box__detail {
-  font-size: 1.3rem;
-}
-.section-description {
-  flex-direction: column;
-}
-.section-description > * {
-  padding: 0 10vw;
-  padding-top: 15vw;
-  align-items: center;
-}
-.description-box {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.description-box .description__text {
-  font-size: 1.4rem;
-  margin-top: -1rem;
-}
-.description-box .description__text:last-child {
-  margin-bottom: 10rem;
-}
-.overview-box__detail {
-  font-size: 1.5rem; 
-}
-/* review */
-.reviews {
-  padding: 1rem 0;
-  grid-column-gap: 2rem;
-}
-.reviews__card {
-  width: 25rem;
-  padding: 2rem;
-  border-radius: 5px;
-}
+    font-size: 1.8rem;
+    width: 85%;
+  }
+  .section-header {
+    height: 50vw;
+  }
+  .heading-box__group {
+    margin-top: 1.5rem;
+  }
+  .heading-box__detail {
+    font-size: 1.3rem;
+  }
+  .section-description {
+    flex-direction: column;
+  }
+  .section-description > * {
+    padding: 0 10vw;
+    padding-top: 15vw;
+    align-items: center;
+  }
+  .description-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .description-box .description__text {
+    font-size: 1.4rem;
+    margin-top: -1rem;
+  }
+  .description-box .description__text:last-child {
+    margin-bottom: 10rem;
+  }
+  .overview-box__detail {
+    font-size: 1.5rem;
+  }
+  /* review */
+  .reviews {
+    padding: 1rem 0;
+    grid-column-gap: 2rem;
+  }
+  .reviews__card {
+    width: 25rem;
+    padding: 2rem;
+    border-radius: 5px;
+  }
 
-.section-cta {
-  margin-top: calc(0px - var(--section-rotate));
-  padding-bottom: 5rem;
-  padding-top: calc(15rem + var(--section-rotate));
-}
+  .section-cta {
+    margin-top: calc(0px - var(--section-rotate));
+    padding-bottom: 5rem;
+    padding-top: calc(15rem + var(--section-rotate));
+  }
 
-.cta {
-  padding: 3rem 2rem;
-}
-.cta__img, .cta__img--logo {
-  display: none;
-}
-.cta__text {
-  font-size: 1.3rem;
-  font-weight: 400;
-}
-/* alert */
-.alert {
-  position: fixed;
-  width: 100%;
-  font-size: 1.5rem;
-  padding: 1.5rem 2rem;
-}
+  .cta {
+    padding: 3rem 2rem;
+  }
+  .cta__img,
+  .cta__img--logo {
+    display: none;
+  }
+  .cta__text {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  /* alert */
+  .alert {
+    position: fixed;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 2.5rem 2rem;
+  }
 
+  /* account */
+  .side-img {
+    padding: 0.8rem 0rem;
+    display: block;
+    width: 3rem;
+    margin-top: -2rem;
+  }
+
+  .user-view__menu {
+    display: none;
+  }
+
+  .user-view {
+    width: 100%;
+    margin: 0;
+  }
+
+  .user-view__menu {
+    flex: 24rem 0 0;
+    padding: 2rem 0;
+    z-index: 1;
+  }
+
+  .user-view__content {
+    padding: 3rem 0;
+  }
+
+  .user-view__form-container {
+    max-width: 100%;
+    padding: 1rem 3rem;
+  }
 }
 
 @media only screen and (max-width: 576px) {
