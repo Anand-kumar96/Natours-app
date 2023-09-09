@@ -61323,7 +61323,9 @@ var bookBtn = document.getElementById('book-tour');
 var navHomeIcon = document.querySelector('.nav-icon');
 var navCrossIcon = document.querySelector('.nav-cross');
 var navUser = document.querySelector('.nav--user');
-var responsive = document.querySelector('.responsive');
+var sideBar = document.querySelector('.side-img');
+var closeBar = document.querySelector('.close-img');
+var userMenu = document.querySelector('.user-view__menu');
 
 //DELEGATION
 if (mapBox) {
@@ -61446,13 +61448,32 @@ window.addEventListener('resize', function () {
   if (window.matchMedia('(min-width: 770px)').matches) {
     navHomeIcon.style.display = 'none';
     navCrossIcon.style.display = 'none';
+    closeBar.style.display = 'none';
+    sideBar.style.display = 'none';
     navUser.classList.remove('responsive');
   }
   if (navCrossIcon.style.display === 'none') {
     if (window.matchMedia('(max-width: 768px)').matches) {
       navHomeIcon.style.display = 'block';
+      sideBar.style.display = 'block';
     }
   }
 });
+
+// account menu bar
+if (sideBar) {
+  sideBar.addEventListener('click', function () {
+    closeBar.style.display = 'block';
+    sideBar.style.display = 'none';
+    userMenu.style.display = 'block';
+  });
+}
+if (closeBar) {
+  closeBar.addEventListener('click', function () {
+    closeBar.style.display = 'none';
+    sideBar.style.display = 'block';
+    userMenu.style.display = 'none';
+  });
+}
 },{"core-js/stable":"../../node_modules/core-js/stable/index.js","regenerator-runtime/runtime":"../../node_modules/regenerator-runtime/runtime.js","./mapbox":"mapbox.js","./login":"login.js","./updateSettings":"updateSettings.js","./signup":"signup.js","./stripe":"stripe.js","./alerts":"alerts.js"}]},{},["index.js"], null)
 //# sourceMappingURL=/index.js.map
